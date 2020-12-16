@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+/* all page css start /////////////////////////////////////////////////////////*/
+
+ *{
+ 	margin: 0;
+ 	padding: 0;
+ 	font-family: 'Poppins', sans-serif;
+ 	outline: none;
+ }
+ 
+ body{
+ 	background: rgba(var(--b3f,250,250,250),1);
+ }
+ 
+/* all page css end /////////////////////////////////////////////////////////*/
+
+/* navbar css start /////////////////////////////////////////////////////////*/
+
+/*top style*/
+
+#top {
+	width: 100vw;
+	padding: 5px 20px;
+	background-color: white;
+	height: 4vh;
+	position: fixed;
+	border: 1px solid #f0f0f0;
+	box-shadow: 6px 6px 12px rgba(0,0,0,0.15),
+						 -6px -6px 12px rgba(255,255,255,1);
+	border: 1px solid rgba(var(--b3f,250,250,250),2);
+	border-radius: 5px;
+}
+
+.nav-contents {
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo {
+	display: flex;
+	align-items: center;
+	margin-left: 460px;
+}
+
+.nav-logo h1{
+	pointer-events: none;
+}
+
+/*top 반응형 start*/
+
+@media(max-width :1100px){
+#top {
+	padding: 5px 20px;
+	background-color: white;
+	height: 37px;
+	position: fixed;
+	border: 1px solid #f0f0f0;
+	border-right: none;
+}
+
+.nav-contents {
+	width: 950px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-logo {
+	display: flex;
+	align-items: center;
+}
+
+}
+/*top 반응형 end*/
+
+/* navbar css end /////////////////////////////////////////////////////////*/
+
+/* container css start /////////////////////////////////////////////////////////*/
+
+.containerbox{
+	position: absolute;
+	width: 50%;
+	margin: 0 auto;
+	background-color: white;
+	bottom: 40px;
+	top: 80px;
+	left: 25%;
+	box-shadow: 6px 6px 12px rgba(0,0,0,0.15),
+						 -6px -6px 12px rgba(255,255,255,1);
+	border: 2px solid rgba(var(--b3f,250,250,250),2);
+	border-radius: 25px;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#maintext{
+	font: bold 40px Montserrat;
+	position: relative;
+	top: 5vh;
+	pointer-events: none;
+}
+
+.container img{
+	position: relative;
+	top: 3vh;
+	left: -15vw;
+	border-radius: 50%;
+}
+
+.container #filepath{
+	position: relative;
+	top: 28vh;
+	left: -13vw;
+}
+
+#profiletext{
+	position: relative;
+	font: bold 30px Montserrat;
+	top: 20vh;
+	pointer-events: none;
+}
+
+#piclabel {
+  position: relative;
+  top: 28vh;
+  left: -15vw;
+  padding: 5px 10px;
+  color: #fff;
+  background-color: #86a6df;
+  cursor: pointer;
+  border: 1px solid #446491;
+  border-radius: .25em;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+#piclabel:hover {
+  background-color: #446491;
+}
+
+#piclabel:active {
+  background-color: #446491;
+}
+
+#filepath[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+hr{
+	position: relative;
+	top: 8vh;
+  	display: block;
+  	margin-top: 0.5em;
+  	margin-bottom: 0.5em;
+  	margin-left: auto;
+  	margin-right: auto;
+  	border-style: inset;
+  	border-width: 1px;
+}
+
+.aboutbox{
+	width: 100px;
+}
+
+.aboutbox label{
+	display: block;
+	position: relative;
+	font-size: 24px;
+	top: 10vh;
+	left: -15vw;
+}
+
+.aboutbox textarea{
+	display: block;
+	margin-top: 70px;
+	font-size: 16px;
+	resize: none;
+	margin-right: -55px;
+	padding: 0 10px;
+	position: relative;
+	left: -5vw;
+	box-shadow: inset -4px -4px 12px rgba(255,255,255,1),
+							inset 2px 2px 6px rgba(0,0,0,0.1);
+	border: 2px solid rgba(var(--b3f,250,250,250),1);
+	border-radius: 15px;
+}
+
+.phonebox label{
+	display: block;
+	position: relative;
+	font-size: 24px;
+	top: 6vh;
+	left: -7.5vw;
+}
+
+.phonebox textarea{
+	display: block;
+	font-size: 16px;
+	resize: none;
+	margin-right: 15px;
+	margin-top: 10px;
+	padding: 0 5px;
+	position: relative;
+	top: 23px;
+	left: 50px;
+	box-shadow: inset -4px -4px 12px rgba(255,255,255,1),
+							inset 2px 2px 6px rgba(0,0,0,0.1);
+	border: 2px solid rgba(var(--b3f,250,250,250),1);
+	border-radius: 15px;
+}
+
+.buttons{
+	padding: 10px 15px;
+	margin: 30px 0;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	letter-spacing: 2px;
+	border-radius: 20px;
+	background: linear-gradient(90deg,#0162c8,#55e7fc);
+	overflow: hidden;
+	border: none;
+}
+
+#reg{
+	position: relative;
+	left: 25%;
+	top: 32px;
+}
+
+#next{
+	position: relative;
+	left: 65vw;
+	top: 85.6vh;
+}
+
+/* container css end /////////////////////////////////////////////////////////*/
+ 
+ 
