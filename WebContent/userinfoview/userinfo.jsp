@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>프로필 설정</title>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/userinfoview/css/userinfo.css">
+	href="/NOTE/userinfoview/css/userinfo.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -107,21 +107,21 @@ $(document).ready(function() {
 	<nav id="top">
 		<div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 			<div>
 				<form action="search.do">
 					<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-					<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+					<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 				</form>			
 		  	</div>
 			<div class="nav-link"> 
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 				<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 		</div>
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
 
 				<div class='photo'>
-				<img class='selfie' src="/webproject2020/images/${requestScope.account_Img }"/>
+				<img class='selfie' src="/NOTE/images/${requestScope.account_Img }"/>
 				<label for='filepath' style="none" >프로필 사진 바꾸기</label>
 				<input type="file" name='filepath' id='filepath' class='filepath'/>
 			</div>

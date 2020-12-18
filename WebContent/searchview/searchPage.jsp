@@ -8,7 +8,7 @@
 <title>검색 결과</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/searchview/css/searchpage.css">
+	href="/NOTE/searchview/css/searchpage.css">
 <script type="text/javascript">
 	
 	$(document).ready(function(){
@@ -41,22 +41,22 @@
 	<div id="top">
 	  <div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 			
           <form action="search.do">
            
 			<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-			<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+			<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 		  </form>
 			
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 					<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 		</div>
@@ -90,7 +90,7 @@
 									<c:if test="${dto.account_Name != 'admin'}">
 									<c:if test="${dto.account_Name != sessionScope.account_Name }">
 										<td rowspan="3" width="80px" height="50" id="td2">
-											<img src="/webproject2020/images/${dto.account_Img}" id="searchpro"/> 
+											<img src="/NOTE/images/${dto.account_Img}" id="searchpro"/> 
 										</td>
 										<td width="200px">닉네임 : ${dto.account_Name}</td>
 										<td rowspan="3" width="100px" id="followbtn">
@@ -145,14 +145,14 @@
 							<div style="height:50px"></div>
 							<div id="me">
 								<!-- 메인페이지 오른쪽 -->
-								<a href="profile.do" id="subbox2_myprofile"><img src = "/webproject2020/images/${sessionScope.account_Img}"/></a>
+								<a href="profile.do" id="subbox2_myprofile"><img src = "/NOTE/images/${sessionScope.account_Img}"/></a>
 								<a href="profile.do" id="subbox2_myname">${sessionScope.account_Name }</a>
 							</div>
 							<div id="follower" >
 								<c:forEach items="${requestScope.aList}" var="dto2">
 									<c:if test="${dto2.account_Name != 'admin'}">
 									<div id="follower_ind">
-										<a href="followProfile.do?following_name=${dto2.account_Name }" id="subbox2_followerprofile"><img src = "/webproject2020/images/${dto2.account_Img}"/></a>
+										<a href="followProfile.do?following_name=${dto2.account_Name }" id="subbox2_followerprofile"><img src = "/NOTE/images/${dto2.account_Img}"/></a>
 										<a href="followProfile.do?following_name=${dto2.account_Name }" id="subbox2_followername">${dto2.account_Name}</a>
 									</div>
 									</c:if>

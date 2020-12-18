@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/mainpageview/css/mainpage.css">
+	href="/NOTE/mainpageview/css/mainpage.css">
 <script type="text/javascript">
 	$(document).ready(function(){
 		/* $( 'html, body' ).stop().animate( { scrollTop : ${requestScope.height} } ) */
@@ -56,23 +56,23 @@
 	  <div class="nav-contents">
 	  
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 				
 	    	 <div>
 	     			<form action="search.do">
 					<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-					<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+					<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 		  		</form>
 			</div>
 		
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 				<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 			
@@ -85,22 +85,22 @@
 			<div class="article" >
 				<div class="article_profile">
 				<form action="followProfile.do">
-					<input type="image" class="article_profile_img" src="/webproject2020/images/${dto2.account_Img}">
+					<input type="image" class="article_profile_img" src="/NOTE/images/${dto2.account_Img}">
 					<input type="text" name="following_Name" class="article_profile_name" value="${dto2.account_Name}">
 				</form>
 				<c:if test="${dto2.account_Name != 'admin'}">
 					<c:if test="${requestScope.aList4[i.index] == '1'}">
-						<img class="article_profile_flag" style="float:right;width: 32px;height: 32px;" src = "/webproject2020/images/fullflag.png"/>
+						<img class="article_profile_flag" style="float:right;width: 32px;height: 32px;" src = "/NOTE/images/fullflag.png"/>
 					</c:if>
 					
 					<c:if test="${requestScope.aList4[i.index] == '0'}">
-						<button type="button" style="float:right;height:0px;cursor:pointer"><img class="article_profile_flag" src = "/webproject2020/images/emptyflag.png"/></button>
+						<button type="button" style="float:right;height:0px;cursor:pointer"><img class="article_profile_flag" src = "/NOTE/images/emptyflag.png"/></button>
 					</c:if>
 					
 					</c:if>
 					<form action="addflag.do" method="post" name="flag_box" class="flag_box"  >
 						<fieldset style="color:white">
-							<p style="text-align:right"><button type="button" class="flag_cancel" style="height:0; cursor:pointer"><img style="width: 20px"src="/webproject2020/images/cancel.png" alt=""></button></p>
+							<p style="text-align:right"><button type="button" class="flag_cancel" style="height:0; cursor:pointer"><img style="width: 20px"src="/NOTE/images/cancel.png" alt=""></button></p>
 							<p style="text-align:center;font-size: 23px;font-weight: bold;"><label>신고할 종류를 선택해주세요.</label></p>
 							<p class="flag_radio"><input type="radio" name="selected_Flag" value="SPAM" checked="checked" >스팸</p>
 							<p class="flag_radio"><input type="radio" name="selected_Flag" value="ABUSIVE" >욕설</p>
@@ -117,7 +117,7 @@
 					
 				</div>
 				
-				<img class="article_img" src="/webproject2020/images/${dto2.post_Img}"/>
+				<img class="article_img" src="/NOTE/images/${dto2.post_Img}"/>
 				
 				<div class="article_likeline" style="display: inline-flex;">
 				
@@ -132,12 +132,12 @@
 				
 				<c:if test="${requestScope.aList3[i.index] == 1}">
 						<a href="${unlike}" >
-						<img src="/webproject2020/images/fullheart.png" class="article_likeline_unlikebtn" ></a>
+						<img src="/NOTE/images/fullheart.png" class="article_likeline_unlikebtn" ></a>
 				</c:if>
 				
 				<c:if test="${requestScope.aList3[i.index] == 0}">
 						<a href="${like}" > 
-						<img src="/webproject2020/images/emptyheart.png" class="article_likeline_likebtn"	></a>
+						<img src="/NOTE/images/emptyheart.png" class="article_likeline_likebtn"	></a>
 				</c:if>
 					<form action="list.do" method="post">
 						<input type="hidden" value="${dto2.post_Num}" name="post_Num">
@@ -147,7 +147,7 @@
 						<input type="hidden" value="${dto2.post_Img}" name="post_Img">
 						<input type="hidden" value="${dto2.post_Content}" name="post_Content">
 						<input type="hidden" value="${dto2.post_Sysdate}" name="post_Sysdate">
-						<input type="image" style="position:relative;left:16px;" src="/webproject2020/images/comment.png" class="article_likeline_commentbtn">
+						<input type="image" style="position:relative;left:16px;" src="/NOTE/images/comment.png" class="article_likeline_commentbtn">
 					</form>
 				</div>
 				
@@ -164,7 +164,7 @@
 		<div class="subbox2_fixed">
 			<div class="myprofile">
 				<!-- 메인페이지 오른쪽 -->
-				<a href="profile.do" class="myprofile_img"><img src = "/webproject2020/images/${sessionScope.account_Img }"/></a>
+				<a href="profile.do" class="myprofile_img"><img src = "/NOTE/images/${sessionScope.account_Img }"/></a>
 				<a href="profile.do" class="myprofile_name">${sessionScope.account_Name }</a>
 			</div>
 			<div class="follower" >
@@ -174,7 +174,7 @@
 						<form action="followProfile.do" id="followProfile" style="margin-top: 20px;">
 						<input type="hidden" name="following_Name" value="${dto.account_Name}">
 						<input type="hidden" name="account_Num" value="${dto.account_Num}">
-							<a href="#"><img class="follower_profile_img" src = "/webproject2020/images/${dto.account_Img}"/></a>
+							<a href="#"><img class="follower_profile_img" src = "/NOTE/images/${dto.account_Img}"/></a>
 							<a href="#" class="follower_profile_name">${dto.account_Name}</a>
 						</form>
 						</div>

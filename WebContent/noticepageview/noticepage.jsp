@@ -10,7 +10,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/noticepageview/css/notice.css">
+	href="/NOTE/noticepageview/css/notice.css">
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#picture").click(function() {
@@ -67,22 +67,22 @@ $(document).ready(function(){
 	<nav id="top">
 		<div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 			<div>
 				<form action="search.do">
 					<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-					<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+					<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 		  		</form>
 			</div>
 
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 					<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 		</div>
@@ -92,7 +92,7 @@ $(document).ready(function(){
 			<div style="height: 10px"></div>
 
 			<div id="profile">
-				<a href="remain.do"><img src="/webproject2020/images/${sessionScope.account_Img }" /></a> <a
+				<a href="remain.do"><img src="/NOTE/images/${sessionScope.account_Img }" /></a> <a
 					href="remain.do" id="profile_name">${sessionScope.account_Name }</a>
 			</div>
 			<img id="picture"
@@ -113,14 +113,14 @@ $(document).ready(function(){
 		<div class="subbox2_fixed">
 			<div class="myprofile">
 				<!-- 메인페이지 오른쪽 -->
-				<a href="profile.do" class="myprofile_img"><img src="/webproject2020/images/${sessionScope.account_Img }"/></a>
+				<a href="profile.do" class="myprofile_img"><img src="/NOTE/images/${sessionScope.account_Img }"/></a>
 				<a href="profile.do" class="myprofile_name">${sessionScope.account_Name }</a>
 			</div>
 			<div class="follower" >
 				<c:forEach items="${requestScope.aList}" var="dto">
 					<c:if test="${dto.account_Name != 'admin'}">
 						<div class="follower_profile">
-							<a href="followProfile.do?following_name=${dto.account_Name }" class="follower_profile_img"><img src = "/webproject2020/images/${dto.account_Img}"/></a>
+							<a href="followProfile.do?following_name=${dto.account_Name }" class="follower_profile_img"><img src = "/NOTE/images/${dto.account_Img}"/></a>
 							<a href="followProfile.do?following_name=${dto.account_Name }" class="follower_profile_name">${dto.account_Name}</a>
 						</div>
 					</c:if>

@@ -10,7 +10,7 @@
 <title>${sessionScope.account_Name }의 프로필</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/profile/css/myprofile.css">
+	href="/NOTE/profile/css/myprofile.css">
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -54,23 +54,23 @@ $(document).ready(function(){
 	<nav id="top">
 	  <div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 			
           <div>
 				<form action="search.do">
 					<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-					<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+					<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 		 		</form>
 		  </div>
 
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 					<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 		</div>
@@ -86,10 +86,10 @@ $(document).ready(function(){
 				<col style="width: 70%;">
 			</colgroup>
 			<tr>
-				<td id="table1_profile" rowspan="2"><img style="height: 200px; width: 200px" id="profileImage" src="/webproject2020/images/${sessionScope.account_Img }"
+				<td id="table1_profile" rowspan="2"><img style="height: 200px; width: 200px" id="profileImage" src="/NOTE/images/${sessionScope.account_Img }"
 					/></td>
 				<td id="nickname" height="20">${sessionScope.account_Name }</td>
-				<td><a href="userinfo.do"><img src="/webproject2020/images/gear.png" id="gear"></a></td>
+				<td><a href="userinfo.do"><img src="/NOTE/images/gear.png" id="gear"></a></td>
 				
 				
 				
@@ -120,7 +120,7 @@ $(document).ready(function(){
 						<tr>
 					</c:if>			
 						<td>
-							<img src="/webproject2020/images/${dto.post_Img}" width="300" height="300"/> <!-- c드라이브 경로 못받음 -->
+							<img src="/NOTE/images/${dto.post_Img}" width="300" height="300"/> <!-- c드라이브 경로 못받음 -->
 						</td>
 					<c:if test="${i%j== j-1 }">
 						</tr>

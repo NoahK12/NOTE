@@ -10,7 +10,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/adminpageview/css/account.css">
+	href="/NOTE/adminpageview/css/account.css">
 
 <style type="text/css">
 div .list {
@@ -28,17 +28,17 @@ div .list {
 		<div class="nav-contents">
 			<div class="nav-logo">
 				<img class="logo-img" src="" /> <img
-					src="/webproject2020/images/logo.jpg">
+					src="/NOTE/images/logo.jpg">
 			</div>
 
 			<h1>AdminPage</h1>
 
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG" /></a>
 				<a style="cursor: pointer;" onclick="window.location.reload()">
-					<img src="/webproject2020/images/refresh.png" />
+					<img src="/NOTE/images/refresh.png" />
 				</a> <a style="cursor: pointer;" href="logout.do"> <img
-					src="/webproject2020/images/Logout.png" /></a>
+					src="/NOTE/images/Logout.png" /></a>
 			</div>
 		</div>
 	</nav>
@@ -63,7 +63,7 @@ div .list {
 						<tr>
 							<td rowspan="5">
 								<div style="width: 400px;">
-									<img src="/webproject2020/images/${dto.account_Img}"
+									<img src="/NOTE/images/${dto.account_Img}"
 										width="100%" />
 								</div>
 							</td>

@@ -429,7 +429,7 @@
 	left: 0;
 	width: 0;
 	height: 100%;
-	background: url("/webproject2020/images/crayonBtn.png");
+	background: url("/NOTE/images/crayonBtn.png");
 	background-size: 100% 100%;
 	transform-origin: left;
 	transition: 0.5s;
@@ -491,7 +491,7 @@
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	background: url(/webproject2020/images/bg.jpg);
+	background: url(/NOTE/images/bg.jpg);
 	background-size: cover;
 }
 
@@ -555,28 +555,28 @@
 }
 
 .container2 .slider .slide.slide1{
-	background: url(/webproject2020/images/mainpage.PNG);
+	background: url(/NOTE/images/mainpage.PNG);
 	background-size: 50vw;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .container2 .slider .slide.slide2{
-	background: url(/webproject2020/images/postpage.PNG);
+	background: url(/NOTE/images/postpage.PNG);
 	background-size: 40vw;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .container2 .slider .slide.slide3{
-	background: url(/webproject2020/images/replypage.JPG);
+	background: url(/NOTE/images/replypage.JPG);
 	background-size: 50vw;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
 .container2 .slider .slide.slide4{
-	background: url(/webproject2020/images/searchpage.JPG);
+	background: url(/NOTE/images/searchpage.JPG);
 	background-size: 50vw;
 	background-repeat: no-repeat;
 	background-position: center;

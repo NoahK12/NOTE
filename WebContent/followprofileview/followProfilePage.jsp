@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <title>${requestScope.account_Name }의 프로필</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="/webproject2020/followprofileview/js/profileAction.js"></script>
+<script src="/NOTE/followprofileview/js/profileAction.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		
@@ -412,23 +412,23 @@ hr {
 	<nav id="top">
 	  <div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 			
           <div>
 				<form action="search.do">
 					<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-					<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+					<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 		 		</form>
 		  </div>
 
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 				<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 		</div>
@@ -444,17 +444,17 @@ hr {
 				<col style="width: 70%;">
 			</colgroup>
 			<tr>
-				<td id="table1_profile" rowspan="2"><img style="height: 200px; width: 200px" id="profileImage" src="/webproject2020/images/${requestScope.account_Img }"
+				<td id="table1_profile" rowspan="2"><img style="height: 200px; width: 200px" id="profileImage" src="/NOTE/images/${requestScope.account_Img }"
 					/></td>
 				<td id="nickname" height="20">${requestScope.account_Name}</td>
 				<td>
 				<c:if test="${sessionScope.account_Id != 'admin' }">
 					<c:if test="${requestScope.num == '1'}">
-						<img class="article_profile_flag"  id="aaa" src = "/webproject2020/images/fullflag.png"/>
+						<img class="article_profile_flag"  id="aaa" src = "/NOTE/images/fullflag.png"/>
 					</c:if>
 					
 					<c:if test="${requestScope.num == '0'}">
-						<button type="button" ><img class="article_profile_flag" src = "/webproject2020/images/emptyflag.png"/></button>
+						<button type="button" ><img class="article_profile_flag" src = "/NOTE/images/emptyflag.png"/></button>
 					</c:if>
 					</c:if>
 				</td>
@@ -477,7 +477,7 @@ hr {
 		</table>
 		<form action="addaccountflag.do" method="post" name="flag_box" class="flag_box"  >
 				<fieldset style="color:white">
-							<p style="text-align:right"><button type="button" class="flag_cancel" style="height:0; cursor:pointer"><img style="width: 20px"src="/webproject2020/images/cancel.png" alt=""></button></p>
+							<p style="text-align:right"><button type="button" class="flag_cancel" style="height:0; cursor:pointer"><img style="width: 20px"src="/NOTE/images/cancel.png" alt=""></button></p>
 							<p style="text-align:center;font-size: 23px;font-weight: bold;"><label>신고할 종류를 선택해주세요.</label></p>
 							<p class="flag_radio"><input type="radio" name="selected_Flag" value="SPAM" checked="checked" >스팸</p>
 							<p class="flag_radio"><input type="radio" name="selected_Flag" value="ABUSIVE" >욕설</p>
@@ -504,7 +504,7 @@ hr {
 						<tr>
 					</c:if>			
 						<td>
-							<img src="/webproject2020/images/${dto.post_Img}" width="300" height="300"/> <!-- c드라이브 경로 못받음 -->
+							<img src="/NOTE/images/${dto.post_Img}" width="300" height="300"/> <!-- c드라이브 경로 못받음 -->
 						</td>
 					<c:if test="${i%j== j-1 }">
 						</tr>

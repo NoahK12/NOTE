@@ -18,7 +18,7 @@ public class DbcpTemplate {
 
 	public static Connection getInit() throws NamingException, SQLException {
 		Context ct = new InitialContext();
-		DataSource ds = (DataSource) ct.lookup("java:comp/env/jdbc/xe");
+		DataSource ds = (DataSource) ct.lookup("java:comp/env/jdbc/note-project");
 		return ds.getConnection();
 	}// end getInit();
 

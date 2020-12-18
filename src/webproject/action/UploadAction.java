@@ -21,7 +21,7 @@ public class UploadAction implements WebMultiImp{
 		 
 		MultipartRequest multi = null;
 		//image file이 저장되는 장소 설정
-		String saveDirectory = "C:/study/workspace/webproject2020/WebContent/images";
+		String saveDirectory = "C:/study/workspace/NOTE/WebContent/images";
 		File file = new File(saveDirectory);
 		if(!file.isDirectory()) {
 			//해당 폴더가 없으면 폴더 생성

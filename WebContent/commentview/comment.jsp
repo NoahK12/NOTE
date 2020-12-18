@@ -9,7 +9,7 @@
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css"
-	href="/webproject2020/commentview/css/comment.css">
+	href="/NOTE/commentview/css/comment.css">
 <script type="text/javascript">
 $(document).ready(function(){
 	
@@ -53,23 +53,23 @@ $(document).ready(function(){
 		<nav id="top">
 	  <div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 			
           <div>
 			<form action="search.do">
 				<input type="text"  class="nav-search" placeholder="검색" name="searchWord"/>
-				<input type="image" class="search-btn" src="/webproject2020/images/search.JPG"/>
+				<input type="image" class="search-btn" src="/NOTE/images/search.JPG"/>
 		  	</form>
 		  </div>
 
 			<div class="nav-link">
-				<a href="remain.do"><img src="/webproject2020/images/home.JPG"/></a>
-				<a href="write.do"><img src="/webproject2020/images/write.JPG"/></a>
-				<a href="profile.do"><img src="/webproject2020/images/profile.JPG"/></a>
-				<a href="logout.do"><img src="/webproject2020/images/Logout.png" /></a>
+				<a href="remain.do"><img src="/NOTE/images/home.JPG"/></a>
+				<a href="write.do"><img src="/NOTE/images/write.JPG"/></a>
+				<a href="profile.do"><img src="/NOTE/images/profile.JPG"/></a>
+				<a href="logout.do"><img src="/NOTE/images/Logout.png" /></a>
 					<c:if test="${sessionScope.account_Id == 'admin' }">
-					<a href="admin.do"><img src="/webproject2020/images/spanner.png"></a>	
+					<a href="admin.do"><img src="/NOTE/images/spanner.png"></a>	
 				</c:if>
 			</div>
 		</div>
@@ -84,10 +84,10 @@ $(document).ready(function(){
 			<tr class="nic1">
 
 				<td id="postImg" rowspan="4" width="500" height="600" >
-				<img src="/webproject2020/images/${requestScope.post_Img }" style="height:500px;width:700px;"/>
+				<img src="/NOTE/images/${requestScope.post_Img }" style="height:500px;width:700px;"/>
 				</td>
 				<td id="nickname" >
-				<img id="accImg" src="/webproject2020/images/${requestScope.account_Img}" width="70" height="70">
+				<img id="accImg" src="/NOTE/images/${requestScope.account_Img}" width="70" height="70">
 					<a href="followProfile.do?following_name=${requestScope.account_Name}" id="nic">${requestScope.account_Name }</a></td>
 			</tr>
 
@@ -107,7 +107,7 @@ $(document).ready(function(){
 				</c:url>
 				<c:if test="${requestScope.num == 1}">
 					<form action="counlike.do">
-						<input type="image" src="/webproject2020/images/fullheart.png" class="article_likeline_unlikebtn" >
+						<input type="image" src="/NOTE/images/fullheart.png" class="article_likeline_unlikebtn" >
 						<input type="hidden" value="${requestScope.post_Num }" name="post_Num"/>
 						<input type="hidden" value="${requestScope.account_Name}" name="account_Name"/>
 						<input type="hidden" value="${requestScope.account_Img}" name="account_Img"/>
@@ -119,7 +119,7 @@ $(document).ready(function(){
 				
 				<c:if test="${requestScope.num == 0}">
 						<form action="colike.do">
-						<input type="image" src="/webproject2020/images/emptyheart.png" class="article_likeline_unlikebtn" >
+						<input type="image" src="/NOTE/images/emptyheart.png" class="article_likeline_unlikebtn" >
 						<input type="hidden" value="${requestScope.post_Num }" name="post_Num"/>
 						<input type="hidden" value="${requestScope.account_Name}" name="account_Name"/>
 						<input type="hidden" value="${requestScope.account_Img}" name="account_Img"/>

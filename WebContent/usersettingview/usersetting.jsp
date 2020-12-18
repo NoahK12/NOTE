@@ -97,7 +97,7 @@ $(document).ready(function(){
  	<nav id="top">
 	  	<div class="nav-contents">
 			<div class="nav-logo">
-				<img src="/webproject2020/images/logo.jpg">
+				<img src="/NOTE/images/logo.jpg">
 			</div>
 		</div>
 	</nav>
