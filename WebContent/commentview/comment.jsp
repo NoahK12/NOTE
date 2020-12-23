@@ -91,7 +91,7 @@ $(document).ready(function(){
 					<a href="followProfile.do?following_name=${requestScope.account_Name}" id="nic">${requestScope.account_Name }</a></td>
 			</tr>
 
-				<tr>
+				<tr style="height: 0px">
 					<td id="commenttext" height="350">
 						<c:forEach items="${requestScope.aList }" var="dto">
 							<a href="#" id="getTag" class="content">#${dto.comment_Name }</a><span>  ${dto.comment_Content }</span>
@@ -100,7 +100,7 @@ $(document).ready(function(){
 					</td>
 				</tr>
 			<tr>
-				<td>
+				<td style="height: 72px">
 				
 				<c:url var="like" value="colike.do">
 					<c:param name="post_Num" value="${requestScope.post_Num}"/>
@@ -148,7 +148,10 @@ $(document).ready(function(){
 				</td>
 				</tr>
 				<tr>
-					<td id="notice" height="50"><p id="contenttext">${requestScope.post_Content }</p><br/><p id="contentdate">${requestScope.post_Sysdate}</p></td>
+					<td id="notice" height="50">
+						<p id="contentdate">${requestScope.post_Sysdate}</p>
+						<p id="contenttext">${requestScope.post_Content }</p>
+					</td>
 				</tr>
 			</tbody>
 		</table>

@@ -117,7 +117,16 @@
 					
 				</div>
 				
-				<img class="article_img" src="/NOTE/images/${dto2.post_Img}"/>
+				<form action="list.do" method="post">
+					<input type="hidden" value="${dto2.post_Num}" name="post_Num">
+					<input type="hidden" value="${dto2.account_Name}" name="account_Name">
+					<input type="hidden" value="${dto2.account_Img}" name="account_Img">
+					<input type="hidden" value="${dto2.post_Like}" name="post_Like">
+					<input type="hidden" value="${dto2.post_Img}" name="post_Img">
+					<input type="hidden" value="${dto2.post_Content}" name="post_Content">
+					<input type="hidden" value="${dto2.post_Sysdate}" name="post_Sysdate">
+ 					<input type="image" class="article_img" src="${pageContext.request.contextPath}/images/${dto2.post_Img}">
+				</form>
 				
 				<div class="article_likeline" style="display: inline-flex;">
 				

@@ -964,7 +964,7 @@ public class WebDAO {
 
 		try {
 			conn = DbcpTemplate.getInit();
-			String sql = "SELECT note_post_num FROM flag_table WHERE account_num=?";
+			String sql = "SELECT post_num FROM note_flag_table WHERE account_num=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setInt(1, account_num);
 			rs = pstmt.executeQuery();
