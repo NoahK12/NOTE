@@ -19,7 +19,7 @@ public class UserSettingAction implements WebMultiImp{
 	public MultipartRequest executeMulti(HttpServletRequest req) {
 		 
 		MultipartRequest multi = null;
-		String saveDirectory = "C:/study/workspace/webproject2020/WebContent/images";
+		String saveDirectory = "C:/study/workspace/NOTE/WebContent/images";
 		File file = new File(saveDirectory);
 		if(!file.isDirectory()) {
 			file.mkdir();
@@ -56,11 +56,22 @@ public class UserSettingAction implements WebMultiImp{
 			String paramname = (String) params.nextElement();
 			if(paramname.equalsIgnoreCase("abouttext")) {
 				String abouttext = multi.getParameter("abouttext");
-				dto.setAccount_About(abouttext);
+				if(abouttext==null) {
+					dto.setAccount_About(abouttext);
+				}else {
+					abouttext="";
+					dto.setAccount_About(abouttext);
+				}
 				session.setAttribute("account_About", abouttext);
 			}
 			if(paramname.equalsIgnoreCase("phonetext")){
 		        String phonetext = multi.getParameter("phonetext");
+		        if(phonetext==null) {
+					dto.setAccount_About(phonetext);
+				}else {
+					phonetext="";
+					dto.setAccount_About(phonetext);
+				}
 		        dto.setAccount_Phone_Num(phonetext);
 		        session.setAttribute("account_Phone_Num", phonetext);
 			}    

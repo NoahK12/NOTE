@@ -109,7 +109,6 @@ $(document).ready(function(){
 			<input type="file" name="filepath" id="filepath" />
 			<label for="filepath" id="piclabel">업로드</label>
 				<img id="profilepic" width="200" height="200" src="${pageContext.request.contextPath}/usersettingview/images/person.png"/>
-			
 			<hr style=width:100%>
 			
 			<div class="aboutbox">

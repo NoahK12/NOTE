@@ -19,7 +19,7 @@ public class UserinfoAction implements WebMultiImp{
 	public MultipartRequest executeMulti(HttpServletRequest req) {
 		 
 		MultipartRequest multi = null;
-		String saveDirectory = "C:/study/workspace/webproject2020/WebContent/images";
+		String saveDirectory = "C:/study/workspace/NOTE/WebContent/images";
 		File file = new File(saveDirectory);
 		if (!file.isDirectory()) {
 			file.mkdir();
