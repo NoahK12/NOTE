@@ -1228,7 +1228,9 @@ public class WebDAO {
 	
 	//by.동기 해당 유저 신고 여부 확인
 	public int flagChek(int account_num, int flag_account_num) {
-	      int num = 0;
+	    int num = 0;
+	    System.out.println("account num: " + account_num);
+	    System.out.println("flag_account num: " + flag_account_num);
 		try {
 	         conn = DbcpTemplate.getInit();
 	         String sql = "select * from note_AFLAG_TABLE where account_num=? and flag_account_num=?";

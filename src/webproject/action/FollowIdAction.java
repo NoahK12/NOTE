@@ -24,6 +24,11 @@ public class FollowIdAction implements WebActionImp{
 		//note_account_follow_join table에서 
 		//해당 유저의 account_num을 검색하여 follower의 정보 list를 가져옴
 		List<AccountDTO> aList = dao.follow(num);
+		for(int i=0;i<aList.size();i++) {
+			int account_num = dao.listMethod(aList.get(i).getAccount_Name()).get(0).getAccount_Num();
+			aList.get(i).setAccount_Num(account_num);
+		}
+		
 		req.setAttribute("aList10", aList);
 	}
 	

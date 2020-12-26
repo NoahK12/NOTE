@@ -17,6 +17,7 @@ public class FollowProfileAction implements WebActionImp{
 		WebDAO dao = WebDAO.getInstance();
 		
 		String following_name = req.getParameter("following_Name");
+		System.out.println("followprofileaction following_name: " + following_name);	
 		AccountDTO pdto = dao.viewMethodByName(following_name);
 		
 		List<PostDTO> aList = dao.getPostMethod(pdto.getAccount_Name());

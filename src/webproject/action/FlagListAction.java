@@ -43,6 +43,8 @@ public class FlagListAction implements WebActionImp {
 
 		WebDAO dao = WebDAO.getInstance();
 		HttpSession session = req.getSession();
+		System.out.println("session account num: " +  session.getAttribute("account_Num"));
+		System.out.println("req.getparam: " +  req.getParameter("account_Num"));
 		int num = dao.flagChek((Integer) session.getAttribute("account_Num"),
 				Integer.parseInt(req.getParameter("account_Num")));
 		req.setAttribute("num", num);

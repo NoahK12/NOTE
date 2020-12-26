@@ -87,6 +87,7 @@
 				<form action="followProfile.do">
 					<input type="image" class="article_profile_img" src="/NOTE/images/${dto2.account_Img}">
 					<input type="text" name="following_Name" class="article_profile_name" value="${dto2.account_Name}">
+					<input type="hidden" name = "account_Num" value="${dto2.account_Num}" />
 				</form>
 				<c:if test="${dto2.account_Name != 'admin'}">
 					<c:if test="${requestScope.aList4[i.index] == '1'}">
@@ -180,11 +181,10 @@
 				<c:forEach items="${requestScope.aList10}" var="dto">
 					<c:if test="${dto.account_Name != 'admin'}">
 						<div class="follower_profile">
-						<form action="followProfile.do" id="followProfile" style="margin-top: 20px;">
-						<input type="hidden" name="following_Name" value="${dto.account_Name}">
-						<input type="hidden" name="account_Num" value="${dto.account_Num}">
-							<a href="#"><img class="follower_profile_img" src = "/NOTE/images/${dto.account_Img}"/></a>
-							<a href="#" class="follower_profile_name">${dto.account_Name}</a>
+						<form action="followProfile.do" id="followProfile" style="margin-top: 20px; display:flex;">
+							<input type="image" name="following_profile_img"class="follower_profile_img" src = "/NOTE/images/${dto.account_Img}">
+							<input type="text" name="following_Name" class="follower_profile_name" value="${dto.account_Name}" style="margin-top:29px; margin-left:5px;">
+							<input type="hidden" name="account_Num" value="${dto.account_Num}">
 						</form>
 						</div>
 					</c:if>
