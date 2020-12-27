@@ -29,7 +29,6 @@ public class AdminAction implements WebActionImp{
 		
 		List<FlagCategoryDTO> aList2 = dao.postFlagCateMethod(aList);
 		
-		
 		req.setAttribute("aList", aList);
 		req.setAttribute("aList2", aList2);
 		

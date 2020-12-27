@@ -937,6 +937,25 @@ public class WebDAO {
 		}
 	}// end addflag()
 	
+	//by.동기 유저 신고시 해당 유저 신고 갯수 +1
+	public void addaflag(int account_num) {
+
+		try {
+			conn = DbcpTemplate.getInit();
+			String sql = "UPDATE note_webaccount set account_flag=account_flag+1 where account_num=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, account_num);
+			pstmt.executeUpdate();
+		} catch (NamingException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			DbcpTemplate.close(conn);
+			DbcpTemplate.close(stmt);
+			DbcpTemplate.close(pstmt);
+			DbcpTemplate.close(rs);
+		}
+	}// end addflag()
+	
 	//by.동기 유저 신고시 note_aflag_category 테이블에 해당 유저가 신고 받은 이유 +1
 	public void addaflag(int account_num, String kind) {
 
