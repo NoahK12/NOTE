@@ -41,20 +41,6 @@ import webproject.action.UserinfoAction;
 @WebServlet("/login/*")
 public class WebPageController extends HttpServlet {
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-		doProcess(req, resp);
-			
-	} // end doGet()
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-		doProcess(req, resp);
-
-	} // end doPost()
-
 	private void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		String path = req.getRequestURI();
